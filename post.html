@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Post One</title>
+</head>
+
+<body id="#home">
+    <header>
+        <div id="navbar" class="navbar top">
+            <div class="logo">
+                <span class="text-primary"><i class="fa fa-book-open"></i> Edge</span>Ledger
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.htmll#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Background + H1  -->
+        <section class="hero blog">
+            <div class="content">
+                <h1>Blog</h1>
+            </div>
+        </section>
+        <section class="post">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+                <i class="fas fa-user"></i> Posted by <strong>John Doe</strong> | September 26 2022
+            </p>
+            <img src="images/blog/blog1.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolor atque quo, similique voluptatibus
+                praesentium in repudiandae mollitia. Vel iusto nam doloribus, itaque numquam illo perferendis corrupti
+                minus veritatis a!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores maiores asperiores sit ducimus error eum
+                minus neque expedita odio libero dignissimos inventore at eaque, explicabo vitae mollitia dolor?
+                Consequuntur nam, est asperiores quas explicabo reprehenderit pariatur aperiam eum suscipit illum earum
+                id cupiditate, optio nihil facere? Labore, repellat earum illum excepturi fugit maxime perferendis
+                doloribus dignissimos placeat hic, eos voluptatum.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt vero vel, fugit nisi pariatur laborum!
+                Laudantium omnis officia consectetur animi quis, quidem nisi suscipit laborum commodi, impedit nobis
+                nulla corporis nihil dolorum iste iure nam consequatur aliquam consequuntur delectus repudiandae, quo
+                harum accusantium cumque. Deserunt quibusdam sunt provident at quisquam labore quaerat ipsum, quas
+                necessitatibus, impedit cupiditate velit, error natus! </p>
+        </section>
+    </main>
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2022 - EdgeLedger</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled = "true";
+                }, 200);
+            }
+            else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        }
+    </script>
+</body>
+
+</html>
