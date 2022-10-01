@@ -8,7 +8,7 @@
 }
 
 /* Button  */
-.btn {
+.btn, .send-btn {
     cursor: pointer;
     display: inline-block;
     padding: 10px 30px;
@@ -18,7 +18,7 @@
     border-radius: 5px;
 }
 
-.btn:hover {
+.btn:hover, .send-btn:hover {
     opacity: 0.9;
 }
 
